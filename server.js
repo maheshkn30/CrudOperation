@@ -8,7 +8,7 @@ app.use(express.json()); //defines which format to u use
 
 // Routes
 app.get("/", function (req, res) {
-  res.send("hello  api");
+  res.send("App is Up");
 });
 
 //Send data to database (CREATE)
@@ -78,7 +78,7 @@ app.delete("/product/:id", async function (req, res) {
     res.status(500).json({ message: error.message });
   }
 });
-//connecting database 
+//connecting database
 mongoose
   .connect("mongodb://localhost:27017/demo")
   .then(function () {
